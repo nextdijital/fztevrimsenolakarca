@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 680" fill="none" stroke="#4F7F88" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Anatomi & Omurga Kolonu (Spine Column Line Art) -->
+  <g opacity="0.95">
+    <!-- Dikey Omurga Ekseni -->
+    <path d="M100 20 C104 70 96 120 98 175 C102 240 110 305 106 370 C100 440 94 510 98 575 C100 610 102 645 100 665" stroke-dasharray="4 4" stroke="#224146" stroke-width="1.8"/>
+    
+    <!-- C1 - C7 Boyun Omurları (Cervical Spine) -->
+    <path d="M85 35 C92 28 108 28 115 35 C110 42 90 42 85 35 Z" fill="rgba(79, 127, 136, 0.08)"/>
+    <ellipse cx="100" cy="52" rx="18" ry="6.5" fill="rgba(79, 127, 136, 0.08)"/>
+    <path d="M78 52 C68 49 68 55 78 58 M122 52 C132 49 132 55 122 58"/>
+    <ellipse cx="100" cy="74" rx="20" ry="7" fill="rgba(79, 127, 136, 0.08)"/>
+    <path d="M75 74 C64 71 64 77 75 80 M125 74 C136 71 136 77 125 80"/>
+    <ellipse cx="99" cy="98" rx="22" ry="7.5" fill="rgba(79, 127, 136, 0.08)"/>
+    <path d="M72 98 C60 95 60 101 72 105 M126 98 C138 95 138 101 126 105"/>
+    <ellipse cx="98" cy="124" rx="24" ry="8" fill="rgba(79, 127, 136, 0.08)"/>
+    <path d="M68 124 C55 120 55 128 68 132 M128 124 C141 120 141 128 128 132"/>
+
+    <!-- T1 - T12 Sırt Omurları (Thoracic Spine) -->
+    <ellipse cx="98" cy="154" rx="27" ry="9" fill="rgba(79, 127, 136, 0.08)"/>
+    <path d="M65 154 C48 149 48 159 65 164 M131 154 C148 149 148 159 131 164"/>
+    <ellipse cx="99" cy="186" rx="30" ry="9.5" fill="rgba(79, 127, 136, 0.08)"/>
+    <path d="M63 186 C42 181 42 191 63 196 M135 186 C156 181 156 191 135 196"/>
+    <ellipse cx="101" cy="220" rx="32" ry="10" fill="rgba(79, 127, 136, 0.08)"/>
+    <path d="M62 220 C38 215 38 225 62 230 M140 220 C164 215 164 225 140 230"/>
+    <ellipse cx="103" cy="256" rx="34" ry="10.5" fill="rgba(79, 127, 136, 0.08)"/>
+    <path d="M62 256 C35 250 35 262 62 268 M144 256 C171 250 171 262 144 268"/>
+    <ellipse cx="105" cy="294" rx="36" ry="11" fill="rgba(79, 127, 136, 0.08)"/>
+    <path d="M63 294 C33 288 33 300 63 306 M147 294 C177 288 177 300 147 306"/>
+    <ellipse cx="106" cy="334" rx="38" ry="11.5" fill="rgba(79, 127, 136, 0.08)"/>
+    <path d="M63 334 C31 328 31 340 63 346 M149 334 C181 328 181 340 149 346"/>
+    <ellipse cx="105" cy="375" rx="39" ry="12" fill="rgba(79, 127, 136, 0.08)"/>
+    <path d="M61 375 C28 368 28 382 61 388 M149 375 C182 368 182 382 149 388"/>
+
+    <!-- L1 - L5 Bel Omurları (Lumbar Spine - Güçlü Gövdeler) -->
+    <ellipse cx="103" cy="419" rx="41" ry="13" fill="rgba(79, 127, 136, 0.08)"/>
+    <path d="M57 419 C22 412 22 426 57 433 M149 419 C184 412 184 426 149 433"/>
+    <ellipse cx="100" cy="465" rx="43" ry="14" fill="rgba(79, 127, 136, 0.08)"/>
+    <path d="M52 465 C14 458 14 472 52 480 M148 465 C186 458 186 472 148 480"/>
+    <ellipse cx="98" cy="514" rx="45" ry="14.5" fill="rgba(79, 127, 136, 0.08)"/>
+    <path d="M47 514 C7 506 7 522 47 530 M149 514 C189 506 189 522 149 530"/>
+    <ellipse cx="98" cy="564" rx="46" ry="15" fill="rgba(79, 127, 136, 0.08)"/>
+    <path d="M46 564 C5 556 5 572 46 581 M150 564 C191 556 191 572 150 581"/>
+
+    <!-- Sakrum & Koksiks (Sacrum & Coccyx) -->
+    <path d="M52 598 C68 586 128 586 144 598 C136 638 122 668 100 680 C78 668 64 638 52 598 Z" fill="rgba(79, 127, 136, 0.08)"/>
+    <circle cx="85" cy="615" r="4.5" stroke="#224146"/>
+    <circle cx="111" cy="615" r="4.5" stroke="#224146"/>
+    <circle cx="89" cy="638" r="3.5" stroke="#224146"/>
+    <circle cx="107" cy="638" r="3.5" stroke="#224146"/>
+  </g>
+</svg>

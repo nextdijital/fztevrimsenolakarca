@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 480" fill="none" stroke="#4F7F88" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Eklem & Biyomekanik Hatlar (Knee & Femur-Tibia Kinetic Joint Line Art) -->
+  <g opacity="0.95">
+    <!-- Femur Şaftı (Uyluk Kemiği) -->
+    <path d="M105 30 L105 170 C105 210 75 225 65 250 C55 275 80 295 105 290" fill="rgba(79, 127, 136, 0.08)"/>
+    <path d="M135 30 L135 170 C135 210 165 225 175 250 C185 275 160 295 135 290" fill="rgba(79, 127, 136, 0.08)"/>
+    
+    <!-- Patella (Diz Kapağı Kemiği) -->
+    <ellipse cx="120" cy="245" rx="22" ry="26" stroke="#224146" stroke-width="2.4" fill="rgba(79, 127, 136, 0.12)"/>
+    <path d="M110 235 Q120 230 130 235" stroke="#224146"/>
+    
+    <!-- Eklem Boşluğu & Menisküs Hatları (Joint Space & Meniscus) -->
+    <path d="M60 295 Q120 280 180 295" stroke="#224146" stroke-width="2.5"/>
+    <path d="M65 308 Q120 295 175 308" stroke="#224146" stroke-width="2" stroke-dasharray="4 4"/>
+    
+    <!-- Tibia & Fibula (Kaval ve Kamış Kemiği) -->
+    <path d="M70 315 C60 335 80 355 100 365 L100 460" fill="rgba(79, 127, 136, 0.08)"/>
+    <path d="M170 315 C180 335 160 355 140 365 L140 460" fill="rgba(79, 127, 136, 0.08)"/>
+    <path d="M182 320 C195 345 190 380 185 460" stroke="#224146" stroke-dasharray="5 5"/>
+
+    <!-- Biyomekanik Yük & Açı Vektörleri -->
+    <circle cx="120" cy="285" r="5" fill="#4F7F88"/>
+    <line x1="120" y1="20" x2="120" y2="470" stroke="#224146" stroke-width="1.2" stroke-dasharray="6 6" opacity="0.6"/>
+  </g>
+</svg>

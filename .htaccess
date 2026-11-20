@@ -1,0 +1,79 @@
+# ==============================================================================
+# Fzt. Evrim Şenol Akarca Özel Sağlık Meslek Hizmet Birimi
+# Güvenlik, Hız ve SEO Temiz URL Yapılandırması (.htaccess)
+# ==============================================================================
+
+Options -Indexes
+Options +FollowSymLinks
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /fztevrimsenolakarca/
+
+    # Doğrudan var olan dosya veya klasörlere dokunma
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # Temiz URL Yönlendirmeleri
+    RewriteRule ^hakkimizda/?$ hakkimizda.php [L,QSA]
+    RewriteRule ^hizmetlerimiz/?$ hizmetlerimiz.php [L,QSA]
+    RewriteRule ^hizmetler/([a-zA-Z0-9_-]+)/?$ hizmet-detay.php?slug=$1 [L,QSA]
+    RewriteRule ^sikca-sorulan-sorular/?$ sss.php [L,QSA]
+    RewriteRule ^blog/?$ blog.php [L,QSA]
+    RewriteRule ^blog/([a-zA-Z0-9_-]+)/?$ blog-detay.php?slug=$1 [L,QSA]
+    RewriteRule ^tarifler/?$ tarifler.php [L,QSA]
+    RewriteRule ^iletisim/?$ iletisim.php [L,QSA]
+
+    # Hukuki ve Yasal Sayfalar
+    RewriteRule ^kvkk/?$ kvkk.php [L,QSA]
+    RewriteRule ^cerez-politikasi/?$ cerez-politikasi.php [L,QSA]
+    RewriteRule ^yasal-uyari/?$ yasal-uyari.php [L,QSA]
+    RewriteRule ^randevu-politikasi/?$ randevu-politikasi.php [L,QSA]
+
+    # Sitemap
+    RewriteRule ^sitemap\.xml$ sitemap.php [L,QSA]
+</IfModule>
+
+# Hassas Dosyaların İndirilmesini Engelle
+<FilesMatch "\.(env|sql|log|md|git|json|lock)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order deny,allow
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# Güvenlik Başlıkları (Security Headers)
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Gzip / Brotli Sıkıştırma (Performans & CWV)
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json application/xml
+</IfModule>
+
+# Tarayıcı Önbelleğe Alma (Browser Caching / Core Web Vitals)
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 month"
+    ExpiresByType text/html "access plus 0 seconds"
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType text/javascript "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+# Özel 404 Hata Sayfası
+ErrorDocument 404 /fztevrimsenolakarca/404.php

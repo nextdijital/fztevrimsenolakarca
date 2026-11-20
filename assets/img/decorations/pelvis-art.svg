@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 380" fill="none" stroke="#4F7F88" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Pelvis & Pelvik Taban Çizgisel Tıbbi Anatomi -->
+  <g opacity="0.95">
+    <!-- Sol İliak Kanat (Left Ilium) -->
+    <path d="M140 85 C95 35 25 70 35 165 C40 215 80 238 115 245 C150 250 162 215 168 185 C175 155 162 110 140 85 Z" fill="rgba(79, 127, 136, 0.08)"/>
+    <!-- Sağ İliak Kanat (Right Ilium) -->
+    <path d="M320 85 C365 35 435 70 425 165 C420 215 380 238 345 245 C310 250 298 215 292 185 C285 155 298 110 320 85 Z" fill="rgba(79, 127, 136, 0.08)"/>
+    
+    <!-- İliak Krest Konturları (İç Hatlar) -->
+    <path d="M70 120 C85 95 125 110 145 135" stroke="#224146" stroke-width="1.8" opacity="0.8"/>
+    <path d="M390 120 C375 95 335 110 315 135" stroke="#224146" stroke-width="1.8" opacity="0.8"/>
+
+    <!-- Sakrum Merkezi (Sacrum) -->
+    <path d="M190 75 C215 65 245 65 270 75 C260 140 248 180 230 210 C212 180 200 140 190 75 Z" fill="rgba(79, 127, 136, 0.1)"/>
+    <circle cx="212" cy="100" r="4.5" stroke="#224146"/>
+    <circle cx="248" cy="100" r="4.5" stroke="#224146"/>
+    <circle cx="216" cy="130" r="4" stroke="#224146"/>
+    <circle cx="244" cy="130" r="4" stroke="#224146"/>
+    <circle cx="220" cy="160" r="3.5" stroke="#224146"/>
+    <circle cx="240" cy="160" r="3.5" stroke="#224146"/>
+    
+    <!-- Asetabulum / Kalça Eklem Yuvası (Hip Sockets) -->
+    <circle cx="115" cy="225" r="24" stroke="#224146" stroke-width="2"/>
+    <circle cx="345" cy="225" r="24" stroke="#224146" stroke-width="2"/>
+
+    <!-- Pubis & İskiyum Kemikleri (Pubic Arc & Ischium) -->
+    <path d="M115 245 C105 285 135 340 185 340 C215 340 225 310 230 285 C235 310 245 340 275 340 C325 340 355 285 345 245"/>
+    <ellipse cx="155" cy="280" rx="22" ry="28" fill="rgba(79, 127, 136, 0.08)"/>
+    <ellipse cx="305" cy="280" rx="22" ry="28" fill="rgba(79, 127, 136, 0.08)"/>
+    
+    <!-- Pelvik Taban Kas Ağ Çizgileri (Pelvic Floor Active Network) -->
+    <path d="M175 250 Q230 290 285 250" stroke="#224146" stroke-width="2" stroke-dasharray="5 5"/>
+    <path d="M185 270 Q230 310 275 270" stroke="#224146" stroke-width="2" stroke-dasharray="5 5"/>
+    <path d="M200 290 Q230 325 260 290" stroke="#224146" stroke-width="1.8" stroke-dasharray="4 4"/>
+  </g>
+</svg>

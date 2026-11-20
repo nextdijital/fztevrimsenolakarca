@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 540" fill="none" stroke="#4F7F88" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Postür & Fonksiyonel Beden Ekseni (Kinematic Posture Alignment) -->
+  <g opacity="0.95">
+    <!-- Baş & Kranium (Head & Cranial Outline) -->
+    <ellipse cx="120" cy="55" rx="30" ry="38" fill="rgba(79, 127, 136, 0.08)"/>
+    <path d="M120 93 L120 120" stroke="#224146" stroke-width="2.4"/>
+    
+    <!-- Omuz & Klavikula Ekseni (Shoulder Girdle) -->
+    <path d="M60 135 Q120 125 180 135" stroke="#224146" stroke-width="2.5"/>
+    <circle cx="60" cy="135" r="4.5" fill="#4F7F88"/>
+    <circle cx="180" cy="135" r="4.5" fill="#4F7F88"/>
+
+    <!-- Göğüs Kafesi & Omurga Akışı (Thorax & Spine Flow) -->
+    <path d="M75 140 C65 190 70 230 85 260 L155 260 C170 230 175 190 165 140" fill="rgba(79, 127, 136, 0.06)"/>
+    
+    <!-- Pelvis Taban & Kalça Hattı (Pelvic Core Base) -->
+    <path d="M80 270 Q120 290 160 270" stroke="#224146" stroke-width="2.4"/>
+    <path d="M70 280 C60 320 80 340 100 350 L140 350 C160 340 180 320 170 280" fill="rgba(79, 127, 136, 0.08)"/>
+
+    <!-- Denge & Ağırlık Merkezi Hattı (Center of Gravity Plumb Line) -->
+    <line x1="120" y1="15" x2="120" y2="525" stroke="#224146" stroke-width="1.4" stroke-dasharray="5 5" opacity="0.6"/>
+    <circle cx="120" cy="275" r="7" stroke="#224146" stroke-width="2" fill="rgba(79, 127, 136, 0.25)"/>
+    
+    <!-- Bacak Ekseni (Lower Extremity Axes) -->
+    <line x1="95" y1="355" x2="85" y2="520" stroke="#4F7F88" stroke-width="2"/>
+    <line x1="145" y1="355" x2="155" y2="520" stroke="#4F7F88" stroke-width="2"/>
+    <circle cx="90" cy="435" r="4.5" stroke="#224146"/>
+    <circle cx="150" cy="435" r="4.5" stroke="#224146"/>
+  </g>
+</svg>

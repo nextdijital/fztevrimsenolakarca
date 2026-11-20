@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /xpanel/
+Disallow: /config/
+Disallow: /storage/
+Disallow: /schema.sql
+Disallow: /seed.php
+
+Sitemap: http://localhost/fztevrimsenolakarca/sitemap.xml
