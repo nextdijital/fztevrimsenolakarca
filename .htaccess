@@ -8,7 +8,6 @@ Options +FollowSymLinks
 
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    RewriteBase /fztevrimsenolakarca/
 
     # Doğrudan var olan dosya veya klasörlere dokunma
     RewriteCond %{REQUEST_FILENAME} -f [OR]
@@ -76,4 +75,4 @@ Options +FollowSymLinks
 </IfModule>
 
 # Özel 404 Hata Sayfası
-ErrorDocument 404 /fztevrimsenolakarca/404.php
+ErrorDocument 404 /404.php
