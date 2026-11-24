@@ -66,10 +66,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 ], JSON_UNESCAPED_UNICODE);
             }
 
+            $rawContent = trim((string)($data['content'] ?? ''));
+            if ($selectedPage === 'home') {
+                $savedContent = trim(strip_tags(html_entity_decode($rawContent, ENT_QUOTES, 'UTF-8')));
+            } else {
+                $savedContent = plain_text_to_html($rawContent);
+            }
+
             $updateStmt->execute([
                 ':title' => trim((string)($data['title'] ?? '')),
                 ':subtitle' => trim((string)($data['subtitle'] ?? '')),
-                ':content' => plain_text_to_html(trim((string)($data['content'] ?? ''))),
+                ':content' => $savedContent,
                 ':extra_data' => $extra,
                 ':pk' => $selectedPage,
                 ':sk' => $secKey

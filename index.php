@@ -39,9 +39,14 @@ $heroBgImg = !empty($heroButtons['image_url']) ? url($heroButtons['image_url']) 
                     Fizyoterapi de Kişiye Özel Olmalıdır.
                 </h1>
 
-                <p class="hero-description">
-                    <?= e($heroContent['content'] ?? "Fizyoterapist Evrim Şenol Akarca Özel Sağlık Meslek Hizmet Birimi olarak; Adana'da sunduğumuz fizyoterapi hizmetlerinde bilimsel temelli değerlendirme yöntemlerini, manuel terapi uygulamalarını ve kişiye özel egzersiz programlarını bir araya getiriyoruz.") ?>
-                </p>
+                <?php 
+                $rawHeroDesc = (string)($heroContent['content'] ?? '');
+                $cleanHeroDesc = trim(strip_tags(html_entity_decode($rawHeroDesc, ENT_QUOTES, 'UTF-8')));
+                if ($cleanHeroDesc === '') {
+                    $cleanHeroDesc = "Fizyoterapist Evrim Şenol Akarca Özel Sağlık Meslek Hizmet Birimi olarak; Adana'da sunduğumuz fizyoterapi hizmetlerinde bilimsel temelli değerlendirme yöntemlerini, manuel terapi uygulamalarını ve kişiye özel egzersiz programlarını bir araya getiriyoruz.";
+                }
+                ?>
+                <p class="hero-description"><?= e($cleanHeroDesc) ?></p>
             </div>
         </div>
     </div>
@@ -58,7 +63,14 @@ $heroBgImg = !empty($heroButtons['image_url']) ? url($heroButtons['image_url']) 
                 <div class="card-top">
                     <span class="badge-tag light"><?= e($approachContent['subtitle'] ?? 'Klinik Yaklaşımımız') ?></span>
                     <h2 class="card-title"><?= e($approachContent['title'] ?? 'Yalnızca Şikâyetlere Değil, İnsanın Bütününe Odaklanıyoruz') ?></h2>
-                    <p><?= e($approachContent['content'] ?? 'Fizyoterapi yaklaşımımızın merkezinde yalnızca ağrı değil, bireyin kendisi yer alır.') ?></p>
+                    <?php 
+                    $rawApproachDesc = (string)($approachContent['content'] ?? '');
+                    $cleanApproachDesc = trim(strip_tags(html_entity_decode($rawApproachDesc, ENT_QUOTES, 'UTF-8')));
+                    if ($cleanApproachDesc === '') {
+                        $cleanApproachDesc = 'Fizyoterapi yaklaşımımızın merkezinde yalnızca ağrı değil, bireyin kendisi yer alır.';
+                    }
+                    ?>
+                    <p><?= e($cleanApproachDesc) ?></p>
                 </div>
                 <div class="card-bottom">
                     <a href="<?= e(!empty($approachButtons['btn1_url']) ? $approachButtons['btn1_url'] : url('hakkimizda')) ?>" class="btn btn-white" style="font-size: 0.78rem; padding: 0.8rem 1.6rem;">
