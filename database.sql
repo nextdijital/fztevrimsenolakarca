@@ -265,7 +265,7 @@ CREATE TABLE `site_settings` (
   `description` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `key_name` (`key_name`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -274,7 +274,7 @@ CREATE TABLE `site_settings` (
 
 LOCK TABLES `site_settings` WRITE;
 /*!40000 ALTER TABLE `site_settings` DISABLE KEYS */;
-INSERT INTO `site_settings` VALUES (1,'site_title','Fizyoterapist Evrim Şenol Akarca Özel Sağlık Meslek Hizmet Birimi','general','Resmi Klinik Adı'),(2,'specialist_name','Fzt. Evrim Şenol Akarca','general','Yetkili Uzman Adı'),(3,'specialist_title','Fizyoterapist','general','Uzman Unvanı'),(4,'phone','0532 470 04 80','contact','İletişim Telefonu'),(5,'phone_raw','+905324700480','contact','Tıklanabilir Telefon'),(6,'whatsapp','0532 470 04 80','contact','WhatsApp Numarası'),(7,'whatsapp_raw','905324700480','contact','WhatsApp Bağlantı Numarası'),(8,'email','evrimmsenol@yahoo.com.tr','contact','E-Posta Adresi'),(9,'address','Hurmalı Mah. Kurtuluş Cad. No:39 Central Plaza Kat:8/81 Seyhan / Adana','contact','Klinik Adresi'),(10,'city','Adana','contact','Şehir'),(11,'district','Seyhan','contact','İlçe'),(12,'instagram','@fzt.evrimsenol','social','Instagram Kullanıcı Adı'),(13,'instagram_url','https://instagram.com/fzt.evrimsenol','social','Instagram Profili'),(14,'working_hours','Pazartesi - Cumartesi: 09:00 - 18:30 (Ön Randevu ile)','general','Çalışma Saatleri'),(15,'meta_description','Fizyoterapist Evrim Şenol Akarca Özel Sağlık Meslek Hizmet Birimi Adana. Pelvik taban, biofeedback, lipödem, lenfödem, omurga ve kişiye özel fizyoterapi.','seo','Genel Meta Açıklama'),(16,'google_maps_embed','<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3186.297775988294!2d35.3182!3d36.9944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15288f62f8373b95%3A0xc3c9f2256722d4f!2sKurtulu%C5%9F%20Cd.%20No%3A39%2C%20Hurmal%C4%B1%2C%2001060%20Seyhan%2FAdana!5e0!3m2!1str!2str!4v1700000000000!5m2!1str!2str\" width=\"100%\" height=\"420\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>','contact','Google Maps Embed Kodu'),(17,'facebook_url','','social','Facebook Profil URL');
+INSERT INTO `site_settings` VALUES (1,'site_title','Fizyoterapist Evrim Şenol Akarca Özel Sağlık Meslek Hizmet Birimi','general','Resmi Klinik Adı'),(2,'specialist_name','Fzt. Evrim Şenol Akarca','general','Yetkili Uzman Adı'),(3,'specialist_title','Fizyoterapist','general','Uzman Unvanı'),(4,'phone','0532 470 04 80','contact','İletişim Telefonu'),(5,'phone_raw','+905324700480','contact','Tıklanabilir Telefon'),(6,'whatsapp','0532 470 04 80','contact','WhatsApp Numarası'),(7,'whatsapp_raw','905324700480','contact','WhatsApp Bağlantı Numarası'),(8,'email','evrimmsenol@yahoo.com.tr','contact','E-Posta Adresi'),(9,'address','Hurmalı Mah. Kurtuluş Cad. No:39 Central Plaza Kat:8/81 Seyhan / Adana','contact','Klinik Adresi'),(10,'city','Adana','contact','Şehir'),(11,'district','Seyhan','contact','İlçe'),(12,'instagram','@fzt.evrimsenol','social','Instagram Kullanıcı Adı'),(13,'instagram_url','https://instagram.com/fzt.evrimsenol','social','Instagram Profili'),(14,'working_hours','Pazartesi - Cumartesi: 09:00 - 18:30 (Ön Randevu ile)','general','Çalışma Saatleri'),(15,'meta_description','Fizyoterapist Evrim Şenol Akarca Özel Sağlık Meslek Hizmet Birimi Adana. Pelvik taban, biofeedback, lipödem, lenfödem, omurga ve kişiye özel fizyoterapi.','seo','Genel Meta Açıklama'),(16,'google_maps_embed','<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3186.297775988294!2d35.3182!3d36.9944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15288f62f8373b95%3A0xc3c9f2256722d4f!2sKurtulu%C5%9F%20Cd.%20No%3A39%2C%20Hurmal%C4%B1%2C%2001060%20Seyhan%2FAdana!5e0!3m2!1str!2str!4v1700000000000!5m2!1str!2str\" width=\"100%\" height=\"420\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>','contact','Google Maps Embed Kodu'),(17,'facebook_url','','social','Facebook Profil URL'),(18,'google_maps_link','https://maps.google.com/?q=Hurmal%C4%B1+Mah.+Kurtulu%C5%9F+Cad.+No%3A39+Central+Plaza+Seyhan+Adana','contact','Google Maps Doðrudan Konum / Navigasyon Linki');
 /*!40000 ALTER TABLE `site_settings` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -287,4 +287,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-11-24 15:56:54
+-- Dump completed on 2026-11-24 16:00:03

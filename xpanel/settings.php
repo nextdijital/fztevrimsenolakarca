@@ -15,9 +15,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $postedSettings = $_POST['settings'] ?? [];
     if (is_array($postedSettings)) {
-        $updateStmt = $db->prepare("UPDATE site_settings SET key_value = :val WHERE key_name = :key");
+        $upsertStmt = $db->prepare("INSERT INTO site_settings (key_name, key_value, group_name, description) 
+            VALUES (:key, :val, 'contact', 'Ayar') 
+            ON DUPLICATE KEY UPDATE key_value = VALUES(key_value)");
         foreach ($postedSettings as $key => $val) {
-            $updateStmt->execute([':val' => trim((string)$val), ':key' => $key]);
+            $upsertStmt->execute([':val' => trim((string)$val), ':key' => $key]);
         }
 
         // Raw formatları otomatik senkronize et
@@ -28,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             } else {
                 $phoneRaw = '+' . $phoneClean;
             }
-            $updateStmt->execute([':val' => $phoneRaw, ':key' => 'phone_raw']);
+            $upsertStmt->execute([':val' => $phoneRaw, ':key' => 'phone_raw']);
         }
         if (isset($postedSettings['whatsapp'])) {
             $waClean = preg_replace('/[^0-9]/', '', $postedSettings['whatsapp']);
@@ -37,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             } else {
                 $waRaw = $waClean;
             }
-            $updateStmt->execute([':val' => $waRaw, ':key' => 'whatsapp_raw']);
+            $upsertStmt->execute([':val' => $waRaw, ':key' => 'whatsapp_raw']);
         }
 
         set_flash('success', 'Site ve kurumsal iletişim ayarları başarıyla güncellendi.');
@@ -149,7 +151,15 @@ require_once __DIR__ . '/includes/header.php';
         </div>
 
         <div class="form-group">
-            <label class="form-label">Google Maps Embed HTML Kodu</label>
+            <label class="form-label">Google Haritalar Doğrudan Konum / Navigasyon Linki</label>
+            <input type="url" name="settings[google_maps_link]" class="form-control" value="<?= e(get_setting('google_maps_link', 'https://maps.google.com/?q=' . rawurlencode('Hurmalı Mah. Kurtuluş Cad. No:39 Central Plaza Seyhan Adana'))) ?>" placeholder="https://maps.google.com/?q=...">
+            <small style="color: var(--text-muted); font-size: 0.8rem; margin-top: 0.25rem; display: block;">
+                İletişim sayfasındaki harita kartının üst sağındaki "Büyük Haritada Aç" bağlantısının ve harita butonunun yönleneceği doğrudan Google Haritalar navigasyon linki.
+            </small>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Google Maps Embed HTML Kodu (Görselli Harita Alanı)</label>
             <textarea name="settings[google_maps_embed]" class="form-control" rows="3"><?= e(get_setting('google_maps_embed')) ?></textarea>
             <small style="color: var(--text-muted); font-size: 0.8rem; margin-top: 0.25rem; display: block;">
                 Google Haritalar'dan "Haritayı Yerleştir" seçeneğindeki `&lt;iframe...&gt;` kodunu buraya yapıştırabilirsiniz.

@@ -7,6 +7,10 @@ $pageDescription = 'Fizyoterapist Evrim Şenol Akarca Özel Sağlık Meslek Hizm
 require_once __DIR__ . '/includes/header.php';
 
 $googleMapsEmbed = get_setting('google_maps_embed');
+$googleMapsLink = get_setting('google_maps_link');
+if (empty($googleMapsLink)) {
+    $googleMapsLink = 'https://maps.google.com/?q=' . rawurlencode('Hurmalı Mah. Kurtuluş Cad. No:39 Central Plaza Seyhan Adana');
+}
 ?>
 
 <section class="service-detail-header">
@@ -82,7 +86,7 @@ $googleMapsEmbed = get_setting('google_maps_embed');
             <div class="contact-map-panel">
                 <div style="padding: 0.85rem 1.25rem; background-color: var(--bg-card-light); border-bottom: 1px solid var(--border-subtle); display: flex; justify-content: space-between; align-items: center;">
                     <span style="font-weight: 700; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-dark);">Klinik Konumu & Harita (Central Plaza)</span>
-                    <a href="https://maps.google.com/?q=<?= rawurlencode('Hurmalı Mah. Kurtuluş Cad. No:39 Central Plaza Seyhan Adana') ?>" target="_blank" rel="noopener noreferrer" style="font-size: 0.78rem; text-decoration: underline; font-weight: 600; color: var(--text-dark);">Büyük Haritada Aç &rarr;</a>
+                    <a href="<?= e($googleMapsLink) ?>" target="_blank" rel="noopener noreferrer" style="font-size: 0.78rem; text-decoration: underline; font-weight: 600; color: var(--text-dark);">Büyük Haritada Aç &rarr;</a>
                 </div>
                 <div class="contact-map-body" style="line-height: 0; overflow: hidden; flex: 1; display: flex; height: 100%;">
                     <?= $googleMapsEmbed ?>
